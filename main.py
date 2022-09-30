@@ -22,7 +22,7 @@ app.add_middleware(
 
 @app.get("/")
 def dizer_ola():
-    return "Oi"
+    return "Oi, tudo bem? Vamos começar!"
 
 # Cadastrando uma nova música
 
