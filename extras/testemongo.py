@@ -1,7 +1,10 @@
+from msilib.schema import Environment
+from os import environ
 from motor.motor_asyncio import AsyncIOMotorClient
 
+
 async def testar_atlas():
-    url = "mongodb+srv://maypbarbosa:55145230@luizacode.ddwgqiu.mongodb.net/musicasbd?retryWrites=true&w=majority" #musicasdb nome banco criado na url
+    url = environ.get("DATABASE_URI")
     cliente_mongo = AsyncIOMotorClient(url)
     
     bd = cliente_mongo.get_default_database()
